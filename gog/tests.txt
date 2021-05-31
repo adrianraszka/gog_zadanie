@@ -1,0 +1,29 @@
+Background: User opens wishlist
+	Given page of given user wishlist is open
+
+
+Test Scenario: Use search bar to find BIOMUTANT
+	When user input in the searchbar game title BIOMUTANT
+	Then BIOMUTANT game is visible
+
+
+Test Scenario: Use filters to find Gothic
+	When user applies filters adequate to game Gothic
+	Then Gothic game is displayed
+	
+
+Test Scenario: Use opinion filter to see Cyberpunk 2077 on top
+	When user sorts wishlist by user reviews
+	Then Cyberpunk 2077 is on the top
+	
+
+Test Scenario: Add game to card and delete it
+	When user add a game to the cart
+	Then the game is visible in cart
+	When user removes the game
+	Then cart is empty
+
+
+Test Scenario: Open first game on the list to
+	When user click on a game in wishlist
+	Then page of the game is loaded
